@@ -49,7 +49,7 @@ export default function App() {
         </div>
       </header>
 
-      <div class="container">
+      <div class="container col-xl-14 col-xxl-14">
         <div class="row align-items-center g-lg-5 py-5">
           <div class="col-lg-7 text-center text-lg-start">
             <h1 class="display-4 fw-bold lh-1 mb-3">
@@ -85,7 +85,7 @@ export default function App() {
         </div>
       </div>
 
-      <div class="container">
+      <div class="container col-xl-14 col-xxl-14">
         <table class="table table-striped table-dark">
           <thead>
             <tr>
@@ -97,6 +97,7 @@ export default function App() {
               <th scope="col">PEG</th>
               <th scope="col">FAVÖK Marjı</th>
               <th scope="col">Net Kâr Marjı</th>
+              <th scope="col">Net Borç / FAVÖK</th>
               <th scope="col">Değerleme Puanı &#40;100&#41;</th>
               <th scope="col">Tavsiye</th>
             </tr>
@@ -114,6 +115,7 @@ export default function App() {
                   <td>{value.peg}</td>
                   <td>%{value.ebitdaMargin}</td>
                   <td>%{value.netProfitMargin}</td>
+                  <td>{value.netDebtToEbitda}</td>
                   <td>{value.finalScore}</td>
                   <td>{value.suggestion}</td>
                 </tr>
@@ -122,7 +124,7 @@ export default function App() {
         </table>
       </div>
 
-      <div class="container">
+      <div class="container col-xl-14 col-xxl-14">
         <footer class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3"></ul>
           <p class="text-center text-muted">© 2023 Furkan Kırmızıoğlu</p>
