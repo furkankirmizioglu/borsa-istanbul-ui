@@ -48,8 +48,7 @@ export default function App() {
           </div>
         </div>
       </header>
-
-      <div class="container">
+      <div class="container col-xl-14 col-xxl-14">
         <div class="row align-items-center g-lg-5 py-5">
           <div class="col-lg-7 text-center text-lg-start">
             <h1 class="display-4 fw-bold lh-1 mb-3">
@@ -84,8 +83,7 @@ export default function App() {
           </div>
         </div>
       </div>
-
-      <div class="container">
+      <div class="container col-xl-14 col-xxl-14">
         <table class="table table-striped table-dark">
           <thead>
             <tr>
