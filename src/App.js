@@ -26,9 +26,7 @@ export default function App() {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
-      body: JSON.stringify({
-        "industry": industry,
-      }),
+      body: industry,
     });
     const data = await response.json();
     setValuation(data);
@@ -50,7 +48,6 @@ export default function App() {
           </div>
         </div>
       </header>
-
       <div class="container col-xl-14 col-xxl-14">
         <div class="row align-items-center g-lg-5 py-5">
           <div class="col-lg-7 text-center text-lg-start">
@@ -86,18 +83,18 @@ export default function App() {
           </div>
         </div>
       </div>
-
       <div class="container col-xl-14 col-xxl-14">
         <table class="table table-striped table-dark">
           <thead>
             <tr>
               <th scope="col">Hisse Kodu</th>
-              <th scope="col">Şirket</th>
-              <th scope="col">Son Bilanço Dönemi</th>
+              <th scope="col">Şirket Unvanı</th>
+              <th scope="col">Bilanço Dönemi</th>
               <th scope="col">Fiyat</th>
               <th scope="col">PD / DD</th>
               <th scope="col">PEG</th>
-              <th scope="col">Uzun Vadeli Borç / Özkaynak</th>
+              <th scope="col">FAVÖK Marjı</th>
+              <th scope="col">Net Kâr Marjı</th>
               <th scope="col">Değerleme Puanı &#40;100&#41;</th>
               <th scope="col">Tavsiye</th>
             </tr>
@@ -113,7 +110,8 @@ export default function App() {
                   <td>{value.price}</td>
                   <td>{value.pb}</td>
                   <td>{value.peg}</td>
-                  <td>%{value.longTermDebtToEquity}</td>
+                  <td>%{value.ebitdaMargin}</td>
+                  <td>%{value.netProfitMargin}</td>
                   <td>{value.finalScore}</td>
                   <td>{value.suggestion}</td>
                 </tr>
