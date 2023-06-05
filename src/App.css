@@ -28,6 +28,41 @@
   color: #61dafb;
 }
 
+.custom-scrollbar {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888888 #343a40;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #343a40;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888888;
+}
+
+.custom-button {
+  background-color: #212529;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.custom-button:hover {
+  background-color: #788585;
+}
+
+.th {
+  white-space: "nowrap"
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
