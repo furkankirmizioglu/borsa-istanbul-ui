@@ -51,6 +51,7 @@ export default function App() {
         "Şirket",
         "Bilanço Dönemi",
         "Fiyat",
+        "Fiyat / Kazanç Oranı",
         "Piyasa / Defter Değeri",
         "PEG",
         "FAVÖK Marjı",
@@ -117,7 +118,8 @@ export default function App() {
             <th className="th">Şirket</th>
             <th className="th">Bilanço Dönemi</th>
             <th className="th">Fiyat</th>
-            <th className="th">Piyasa / Defter Değeri</th>
+            <th className="th">F/K</th>
+            <th className="th">PD/DD</th>
             <th className="th">PEG</th>
             <th className="th">FAVÖK Marjı</th>
             <th className="th">Net Kâr Marjı</th>
@@ -135,13 +137,14 @@ export default function App() {
                 <td>{value.companyName}</td>
                 <td>{value.latestBalanceSheetTerm}</td>
                 <td>{value.price}</td>
+                <td>{value.pe}</td>
                 <td>{value.pb}</td>
                 <td>{value.peg}</td>
                 <td>%{value.ebitdaMargin}</td>
                 <td>%{value.netProfitMargin}</td>
                 <td>{value.netDebtToEbitda}</td>
                 <td>
-                  <b>{value.finalScore}</b> / 100
+                  <b>{value.finalScore}</b>
                 </td>
                 <td>{value.suggestion}</td>
               </tr>
@@ -184,10 +187,10 @@ export default function App() {
               hiç bu kadar kolay olmamıştı!
             </h1>
             <p class="col-lg-8 fs-4">
-              Borsa İstanbul'da işlem gören şirketlerin hisselerini beş farklı
-              yöntem ile saniyeler içinde analiz ediyor ve sonuçları anlaşılır
+              Borsa İstanbul'da işlem gören şirketlerin hisselerini 
+              saniyeler içinde analiz ediyor ve sonuçları anlaşılır
               bir şekilde önünüze getiriyoruz. Siz de incelemek istediğiniz
-              sektörü aşağıdan seçerek değerleme sonuçlarını listeleyebilirsiniz.
+              sektörü aşağıdan seçin, borsanın fırsatlarını değerlendirin.
             </p>
           </div>
         </div>
