@@ -19,11 +19,13 @@ export default function App() {
   }, []);
 
   const fetchData = async () => {
-    const response = await fetch("http://localhost:8080/industry/list", {
+    const fetchResult = await fetch("http://localhost:8080/industry/list", {
       mode: "cors",
     });
-    const data = await response.json();
-    setIndustries(data);
+    const response = await fetchResult.json();
+    if(response.responseCode === "1") {
+      setIndustries(response.data.industryList);
+    }       
   };
 
   const fetchValuation = async (industry) => {
@@ -31,7 +33,8 @@ export default function App() {
     setSelectedIndustry(industry);
     ref.current?.scrollIntoView({ behavior: "smooth" });
     setIsLoading(true);
-    const response = await fetch(`http://localhost:8080/valuation/list`, {
+
+    const fetchData = await fetch(`http://localhost:8080/valuation/list`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,9 +42,13 @@ export default function App() {
       },
       body: industry,
     });
-    const data = await response.json();
-    setValuation(data);
-    setIsLoading(false);
+    const response = await fetchData.json();
+    if(response.responseCode === "1") {
+      setValuation(response.data.responseDataList);
+      setIsLoading(false);
+    } else {
+      setIsLoading(false);
+    }
   };
 
   const exportToExcel = () => {
@@ -151,7 +158,7 @@ export default function App() {
             ))
           ) : (
             <tr>
-              <td colSpan="12" style={{ textAlign: "center" }}>
+              <td colSpan="13" style={{ textAlign: "center" }}>
                 Seçtiğiniz sektöre ait hisseler ve analiz değerleri burada
                 görüntülenecektir.
               </td>
