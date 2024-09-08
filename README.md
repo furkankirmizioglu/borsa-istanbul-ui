@@ -6,7 +6,7 @@ This application provides fundamental analysis of stocks traded on the Istanbul 
 
 ## Screenshots
 
-![App Screenshot](https://github.com/furkankirmizioglu/borsa-istanbul-ui/assets/29805446/ffcf6eb0-13a2-4244-9191-beafd0ac14bb)
+![App Screenshot](https://github.com/user-attachments/assets/fcb12831-7859-4c39-8820-3f8986362706)
 
 ## Features
 
