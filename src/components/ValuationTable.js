@@ -19,7 +19,6 @@ export default function ValuationTable(props) {
         "Piyasa / Defter Değeri",
         "Firma Değeri / FAVÖK",
         "Net Borç / FAVÖK",
-        "Borç / Özkaynak Oranı",
         "Değerleme Puanı",
         "Tavsiye",
       ],
@@ -92,7 +91,6 @@ export default function ValuationTable(props) {
                 <th className="th">Piyasa / Defter Değeri</th>
                 <th className="th">Firma Değeri / FAVÖK</th>
                 <th className="th">Net Borç / FAVÖK</th>
-                <th className="th">Borç / Özkaynak</th>
                 <th className="th">Değerleme Puanı</th>
                 <th className="th">Tavsiye</th>
               </tr>
@@ -108,9 +106,8 @@ export default function ValuationTable(props) {
                     <td>{value.price}</td>
                     <td>{value.pe}</td>
                     <td>{value.pb}</td>
-                    <td>{value.enterpriseValueToEbitda}</td>
+                    <td>{value.evToEbitda}</td>
                     <td>{value.netDebtToEbitda}</td>
-                    <td>{value.debtToEquity}</td>
                     <td>
                       <b>{value.finalScore}</b>
                     </td>
@@ -119,7 +116,7 @@ export default function ValuationTable(props) {
                 ))
               ) : (
                 <tr>
-                  <td colSpan="12" style={{ textAlign: "center" }}>
+                  <td colSpan="11" style={{ textAlign: "center" }}>
                     Seçtiğiniz sektöre ait hisseler ve analiz değerleri burada
                     görüntülenecektir.
                   </td>
