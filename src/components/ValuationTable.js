@@ -1,10 +1,10 @@
 import XLSX from "sheetjs-style";
 import * as FileSaver from "file-saver";
 import { useRef } from "react";
-import LoadingSpinner from "./LoadingSpinner"
+import LoadingSpinner from "./LoadingSpinner";
 
 export default function ValuationTable(props) {
-  const {isLoading, valuation, selectedIndustry } = props;
+  const { isLoading, valuation, selectedIndustry } = props;
 
   const ref = useRef(null);
 
@@ -19,6 +19,7 @@ export default function ValuationTable(props) {
         "Piyasa / Defter Değeri",
         "Firma Değeri / FAVÖK",
         "Net Borç / FAVÖK",
+        "Hisse Başı Net Nakit",
         "Değerleme Puanı",
         "Tavsiye",
       ],
@@ -91,6 +92,7 @@ export default function ValuationTable(props) {
                 <th className="th">Piyasa / Defter Değeri</th>
                 <th className="th">Firma Değeri / FAVÖK</th>
                 <th className="th">Net Borç / FAVÖK</th>
+                <th className="th">Hisse Başı Net Nakit</th>
                 <th className="th">Değerleme Puanı</th>
                 <th className="th">Tavsiye</th>
               </tr>
@@ -108,6 +110,7 @@ export default function ValuationTable(props) {
                     <td>{value.pb}</td>
                     <td>{value.evToEbitda}</td>
                     <td>{value.netDebtToEbitda}</td>
+                    <td>{value.netCashPerShare}</td>
                     <td>
                       <b>{value.finalScore}</b>
                     </td>
@@ -116,7 +119,7 @@ export default function ValuationTable(props) {
                 ))
               ) : (
                 <tr>
-                  <td colSpan="11" style={{ textAlign: "center" }}>
+                  <td colSpan="12" style={{ textAlign: "center" }}>
                     Seçtiğiniz sektöre ait hisseler ve analiz değerleri burada
                     görüntülenecektir.
                   </td>
