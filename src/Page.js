@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Header from "./components/Header.js";
 import Scrollbar from "./components/Scrollbar.js";
-import ValuationTable from "./components/ValuationTable.js";
+import Valuation from "./components/Valuation.js";
 import Footer from "./components/Footer.js";
 
 export default function Page() {
@@ -19,7 +19,7 @@ export default function Page() {
         setIsLoading={setIsLoading}
         setValuation={setValuation}
       />
-      <ValuationTable
+      <Valuation
         isLoading={isLoading}
         valuation={valuation}
         selectedIndustry={selectedIndustry}
