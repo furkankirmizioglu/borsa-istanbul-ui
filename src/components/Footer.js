@@ -5,7 +5,7 @@ export default function Footer() {
     <div>
       <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3"></ul>
-        <p class="text-center text-muted">© Furkan Kırmızıoğlu / 2023</p>
+        <p class="text-center text-muted">© Furkan Kırmızıoğlu / 2024</p>
         <p class="text-center text-muted">
           YASAL UYARI: Burada yer alan yatırım bilgi, yorum ve tavsiyeleri
           yatırım danışmanlığı kapsamında değildir. Yatırım danışmanlığı
