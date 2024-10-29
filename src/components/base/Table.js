@@ -49,7 +49,5 @@ export default function Table({data}) {
             </tbody>
           </table>
         </>
-
-
     ) 
 }
